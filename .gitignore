@@ -331,3 +331,4 @@ teamrsvp/media/
 .env
 .envs/*
 !.envs/.local/
+.envs/**/.api_keys

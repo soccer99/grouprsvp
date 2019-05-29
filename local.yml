@@ -17,6 +17,7 @@ services:
       - .:/app
     env_file:
       - ./.envs/.local/.django
+      - ./.envs/.local/.api_keys
       - ./.envs/.local/.postgres
     ports:
       - "8000:8000"

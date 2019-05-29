@@ -71,7 +71,7 @@ THIRD_PARTY_APPS = [
     "rest_framework",
 ]
 LOCAL_APPS = [
-    "teamrsvp.users.apps.UsersConfig",
+    "apps.users.apps.UsersConfig",
     "apps.team",
     "apps.messaging",
 ]

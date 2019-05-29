@@ -18,6 +18,17 @@ Moved to settings_.
 
 .. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
 
+Environment Files
+^^^^^^^^^^^^^^^^^^
+
+Add a file '.api_keys' to your .envs/.local/ folder with the following contents
+
+::
+
+    # Plivo SMS
+    PLIVO_AUTH_ID=*key*
+    PLIVO_AUTH_TOKEN=*token*
+
 Basic Commands
 --------------
 
