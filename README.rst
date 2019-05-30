@@ -32,14 +32,29 @@ Add a file '.api_keys' to your .envs/.local/ folder with the following contents
 Basic Commands
 --------------
 
+Running locally
+^^^^^^^^^^^^^^^
+
+::
+
+    docker-compose -f local.yml build
+    docker-compose -f local.yml up
+    docker-compose -f local.yml up --build
+
+Database migrations
+^^^^^^^^^^^^^^^^^^^
+
+::
+
+    docker-compose -f local.yml run django python manage.py makemigrations
+    docker-compose -f local.yml run django python manage.py migrate
+
 Setting Up Your Users
 ^^^^^^^^^^^^^^^^^^^^^
 
-* To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
-
 * To create an **superuser account**, use this command::
 
-    $ python manage.py createsuperuser
+    $ docker-compose -f local.yml run django python manage.py createsuperuser
 
 For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
 
